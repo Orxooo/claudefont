@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 使用说明与常见问题 / User guide and FAQ
+    url: https://github.com/Orxooo/claudefont#快速开始
+    about: 安装、权限、手动升级和还原说明 / Installation, access, manual updates and restoration.

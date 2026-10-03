@@ -1,0 +1,10 @@
+#!/bin/sh
+# Copyright (C) 2026 Orxooo
+# SPDX-License-Identifier: GPL-3.0-only
+set -eu
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cli_binary="${CLAUDEFONT_SWIFT_BIN:-$HOME/Library/Caches/claudefont/development/claudefont}"
+if [ ! -x "$cli_binary" ]; then
+    "$project_dir/cli/build.sh" "$cli_binary" >&2
+fi
+exec "$cli_binary" "$@"

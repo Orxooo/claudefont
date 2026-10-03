@@ -1,0 +1,84 @@
+name: 问题反馈 / Bug report
+description: 报告安装、权限、样式或还原问题 / Report an installation, access, styling or restore issue.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先查看 README 的使用说明并搜索已有 Issues。请勿上传 Cookies、登录资料、API 密钥或私人会话；日志与截图请先脱敏。
+        Read the README usage notes and search existing issues first. Redact logs and screenshots; do not upload cookies, login data, API keys or private conversations.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 版本 / macOS version
+      placeholder: "例如 / e.g. 27.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Mac 芯片 / Mac architecture
+      options:
+        - Apple Silicon
+        - Intel（当前发行包不支持 / release not supported）
+        - 不确定 / Unsure
+    validations:
+      required: true
+  - type: input
+    id: claude_version
+    attributes:
+      label: Claude 版本 / Claude version
+      placeholder: "例如 / e.g. 2.19675.0"
+    validations:
+      required: true
+  - type: input
+    id: tool_version
+    attributes:
+      label: claudefont 版本 / claudefont version
+      description: 请在「关于」提供版本与构建号 / Include both version and build number from About.
+      placeholder: "例如 / e.g. 1.0.0 (4)"
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: 目标 / Target
+      options:
+        - 正式 Claude / Main Claude
+        - 测试 Claude / Test copy
+        - 其他位置 / Other installation
+        - 无法打开工具 / Tool cannot open
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      description: 说明操作步骤、选用的字体和设置 / Include the steps, font names and relevant settings.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: 预期与实际结果 / Expected and actual results
+      placeholder: |
+        预期 / Expected:
+        实际 / Actual:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 脱敏日志与截图 / Redacted logs and screenshots
+      description: 可粘贴「日志 → 自检」输出。先移除用户名、私人路径和会话内容 / You may paste Diagnose output; remove usernames, private paths and conversation content first.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 提交前确认 / Before submitting
+      options:
+        - label: 我已移除敏感信息 / I have removed sensitive information.
+          required: true
