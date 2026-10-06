@@ -350,7 +350,7 @@ struct WorkspaceView: View {
                     Image(nsImage: NSApplication.shared.applicationIconImage)
                         .resizable().frame(width: 27, height: 27)
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("claudefont").font(.system(size: 12, weight: .semibold))
+                        Text("ClaudeFont").font(.system(size: 12, weight: .semibold))
                         Text("V\(Updater.version)")
                             .font(.system(size: 10)).foregroundStyle(.secondary)
                     }
@@ -1754,7 +1754,7 @@ struct WorkspaceAboutView: View {
                 Image(nsImage: NSApplication.shared.applicationIconImage)
                     .resizable().frame(width: 76, height: 76)
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("claudefont").font(.system(size: 26, weight: .semibold))
+                    Text("ClaudeFont").font(.system(size: 26, weight: .semibold))
                     Text(t("about.version", [
                         "{v}": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "—",
                         "{b}": Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "—"

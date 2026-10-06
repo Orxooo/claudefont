@@ -31,7 +31,7 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
 struct ClaudefontApplication: App {
     @NSApplicationDelegateAdaptor(ApplicationDelegate.self) private var delegate
     var body: some Scene {
-        Window("claudefont", id: "workspace") { WorkspaceView() }
+        Window("ClaudeFont", id: "workspace") { WorkspaceView() }
             .defaultSize(width: 1280, height: 760)
             .commands {
                 CommandGroup(replacing: .appInfo) {

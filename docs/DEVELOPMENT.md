@@ -17,7 +17,7 @@ cd claudefont
 ./gui/build.sh
 ```
 
-默认产物位于 `~/Library/Caches/claudefont/rewrite-20261002/claudefont.app`。
+默认产物位于 `~/Library/Caches/claudefont/rewrite-20261002/ClaudeFont.app`。
 
 `CLAUDEFONT_BUILD_DIR` 仅接受以下目录的子目录，且必须在仓库和 iCloud 外：
 
@@ -33,7 +33,7 @@ cd claudefont
 CLAUDEFONT_SWIFT_BIN="$HOME/Library/Caches/claudefont/cli/claudefont" ./claudefont --help
 ```
 
-发行包的 CLI 位于 `claudefont.app/Contents/Resources/claudefont`。
+发行包的 CLI 位于 `ClaudeFont.app/Contents/Resources/claudefont`。
 
 | 命令 | 用途 |
 | --- | --- |
@@ -52,7 +52,7 @@ CLAUDEFONT_SWIFT_BIN="$HOME/Library/Caches/claudefont/cli/claudefont" ./claudefo
 
 Development requires Apple Silicon, macOS 26+, Xcode 26+ with its macOS SDK and configured command-line tools. GUI builds need a valid Apple Development or Developer ID Application identity in Keychain.
 
-Use the client and CLI commands above. Default app output is `~/Library/Caches/claudefont/rewrite-20261002/claudefont.app`. Override `CLAUDEFONT_BUILD_DIR` only with a subdirectory of the two listed build roots, outside the repository and iCloud. Select a signing identity with `CLAUDEFONT_SIGN_IDENTITY` when several are available.
+Use the client and CLI commands above. Default app output is `~/Library/Caches/claudefont/rewrite-20261002/ClaudeFont.app`. Override `CLAUDEFONT_BUILD_DIR` only with a subdirectory of the two listed build roots, outside the repository and iCloud. Select a signing identity with `CLAUDEFONT_SIGN_IDENTITY` when several are available.
 
 The bundled CLI supports status/diagnostics, apply/restore, backup management and validated import. `status` and `backups` offer JSON output. `doctor` probes write access with a temporary file. Quit the target before apply/restore. Use `--help` for flags.
 

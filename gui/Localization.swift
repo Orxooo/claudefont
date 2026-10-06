@@ -23,7 +23,7 @@ func t(_ key: String, _ replacements: [String:String] = [:]) -> String {
     return result
 }
 private let localization: [String:(String,String)] = [
-    "about.title": ("关于 claudefont", "About claudefont"),
+    "about.title": ("关于 ClaudeFont", "About ClaudeFont"),
     "about.version": ("版本 {v} · 构建 {b}", "Version {v} · Build {b}"),
     "about.tagline": ("为 Claude 桌面版调整字体、阅读排版和配色。", "Tune fonts, reading layout and colors in Claude Desktop."),
     "about.lang": ("界面语言", "Language"), "about.lang.auto": ("跟随系统", "System language"),
@@ -50,7 +50,7 @@ private let localization: [String:(String,String)] = [
     "font.scope.desc": ("选择需要替换字体的语言。", "Choose the language whose fonts should change."),
     "font.ui.size": ("界面字号", "Interface size"),
     "help.title": ("使用说明", "Help"), "helper.title": ("命令工具不可用", "Command tool unavailable"),
-    "helper.body": ("请使用完整的 claudefont 应用包。", "Use a complete claudefont app bundle."), "log.clear": ("清空显示", "Clear display"),
+    "helper.body": ("请使用完整的 ClaudeFont 应用包。", "Use a complete ClaudeFont app bundle."), "log.clear": ("清空显示", "Clear display"),
     "look.bg.blue": ("浅蓝", "Pale blue"), "look.bg.classic": ("暖纸", "Warm paper"),
     "look.bg.custom": ("自定义", "Custom"), "look.bg.darknow": ("当前系统为深色模式，浅色底色将在浅色模式中显示。", "The system is dark; this background appears in light mode."),
     "look.bg.desc": ("浅色模式的阅读底色。", "Reading background for light mode."), "look.bg.grey": ("浅灰", "Soft gray"),
@@ -61,7 +61,7 @@ private let localization: [String:(String,String)] = [
     "sheet.applying.title": ("正在应用", "Applying changes"), "sheet.cancel": ("取消", "Cancel"), "sheet.ok": ("好", "OK"),
     "sheet.create.body": ("复制所选 Claude 应用并建立空白独立配置。不复制登录信息或会话。重建会替换已有测试副本。", "Copy the selected Claude app with a fresh separate profile. Sign-in and sessions are not copied. Rebuilding replaces the existing test copy."),
     "sheet.create.title": ("建立测试副本？", "Create a test copy?"),
-    "sheet.delete.body": ("删除 claudefont 管理的测试应用和测试配置。", "Remove the test app and profile managed by claudefont."),
+    "sheet.delete.body": ("删除 ClaudeFont 管理的测试应用和测试配置。", "Remove the test app and profile managed by ClaudeFont."),
     "sheet.delete.ok": ("删除测试副本", "Delete test copy"), "sheet.delete.title": ("删除测试副本？", "Delete test copy?"),
     "sheet.restart.body": ("已写入设置。请在打开的 Claude 中核验实际效果。", "Settings were written. Check the result in Claude."),
     "sheet.restart.title": ("设置已应用", "Changes applied"),

@@ -1,6 +1,6 @@
-# claudefont architecture
+# ClaudeFont architecture
 
-claudefont is an independently developed native macOS application. Its client,
+ClaudeFont is an independently developed native macOS application. Its client,
 command-line engine, archive handling, styling, backup and recovery logic are
 implemented in this repository using Swift, SwiftUI, AppKit, CoreText and
 macOS system tools. The project distributes neither Claude code nor font files.

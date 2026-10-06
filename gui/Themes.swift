@@ -134,13 +134,13 @@ extension Model {
             theme.name = uniqueThemeName(theme.name)
             try storeThemes(themes + [theme])
             message("主题已导入，可在列表中载入。", "Theme imported. Load it from the library.")
-        } catch { message("导入失败：请选择有效的 claudefont 主题 JSON 文件。", "Import failed. Choose a valid claudefont theme JSON file.",error:true) }
+        } catch { message("导入失败：请选择有效的 ClaudeFont 主题 JSON 文件。", "Import failed. Choose a valid ClaudeFont theme JSON file.",error:true) }
     }
     func exportTheme(_ theme: ThemeDocument) {
         do {
             _ = try theme.validated()
             let panel = NSSavePanel(); panel.allowedContentTypes = [.json]
-            panel.nameFieldStringValue = "claudefont-theme.json"
+            panel.nameFieldStringValue = "ClaudeFont-theme.json"
             guard panel.runModal() == .OK, let url = panel.url else { return }
             let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted,.sortedKeys,.withoutEscapingSlashes]
             try encoder.encode(theme).write(to:url,options:.atomic)

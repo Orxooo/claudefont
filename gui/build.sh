@@ -10,7 +10,7 @@ mkdir -p "$cache"
 cache=$(cd "$cache" && pwd -P)
 case "$cache" in "$HOME/Library/Caches/claudefont"/*|"$HOME/Library/Application Support/claudefont-development"/*) ;; *) echo "Build output resolved outside the claudefont build directories" >&2; exit 2;; esac
 case "$cache" in "$repo"|"$repo"/*|*"/Mobile Documents/"*) echo "Build output must be outside the repository and iCloud" >&2; exit 2;; esac
-app="$cache/claudefont.app"
+app="$cache/ClaudeFont.app"
 if [ -e "$app" ]; then
   [ ! -L "$app" ] && [ -d "$app/Contents" ] || { echo "Refusing unsafe output path" >&2; exit 2; }
   rm -rf "$app"
@@ -44,8 +44,8 @@ cat > "$app/Contents/Info.plist" <<'PLIST'
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
 <key>CFBundleIdentifier</key><string>io.github.orxooo.claudefont</string>
-<key>CFBundleName</key><string>claudefont</string>
-<key>CFBundleDisplayName</key><string>claudefont</string>
+<key>CFBundleName</key><string>ClaudeFont</string>
+<key>CFBundleDisplayName</key><string>ClaudeFont</string>
 <key>CFBundleExecutable</key><string>claudefont</string>
 <key>CFBundleShortVersionString</key><string>1.0.0</string>
 <key>CFBundleVersion</key><string>4</string>
@@ -53,7 +53,7 @@ cat > "$app/Contents/Info.plist" <<'PLIST'
 <key>CFBundleIconFile</key><string>claudefont</string>
 <key>LSMinimumSystemVersion</key><string>26.0</string>
 <key>NSHighResolutionCapable</key><true/>
-<key>NSSystemAdministrationUsageDescription</key><string>claudefont needs access to back up, update and restore the Claude app you select.</string>
+<key>NSSystemAdministrationUsageDescription</key><string>ClaudeFont needs access to back up, update and restore the Claude app you select.</string>
 <key>NSHumanReadableCopyright</key><string>Copyright © 2026 Orxooo. GPL-3.0-only.</string>
 </dict></plist>
 PLIST
